@@ -23,6 +23,7 @@ const SSRPage = ({ serverData }) => {
           type={"image/x-icon"}
         />
       </Helmet>
+	  222
       <Section
         text-align="center"
         background-color="--primary"
@@ -84,7 +85,7 @@ export async function getServerData({ params }) {
     if (!imageReq.ok) {
       throw new Error(`Response failed`)
     }
-
+	// console.log(await imageReq.json())
     return {
       props: await imageReq.json(),
       headers: {
